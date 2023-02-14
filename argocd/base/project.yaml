@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cluster-addons
+  annotations:
+    argocd.argoproj.io/sync-wave: "-100"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  clusterResourceWhitelist:
+  - group: "*"
+    kind: '*'
+  description: Cluster-Addons Project
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  roles:
+  - name: admin
+    description: Admin privileges to cluster-addons
+    policies:
+    - p, proj:cluster-addons:admin, applications, *, cluster-addons/*, allow
+    groups: []

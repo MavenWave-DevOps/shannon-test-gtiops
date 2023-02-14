@@ -1,0 +1,43 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-addons
+  namespace: argocd
+  labels:
+    deployment: kustomize
+    name: cluster-addons
+    tier: cluster
+  annotations:
+    argocd.argoproj.io/sync-wave: "-100"
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/MavenWave-DevOps/shannon-test-gtiops.git
+      revision: main
+      files:
+      - path: dev/cluster-addons/**/config.yaml
+  template:
+    metadata:
+      name: "{{path.basename}}"
+      labels:
+        deployment: kustomize
+        name: "{{path.basename}}"
+        tier: cluster
+      annotations:
+        argocd.argoproj.io/sync-wave: "{{app.syncwave}}"
+    spec:
+      project: cluster-addons
+      source:
+        repoURL: https://github.com/MavenWave-DevOps/shannon-test-gtiops.git
+        path: "{{path}}"
+        targetRevision: main
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{app.namespace}}"
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
