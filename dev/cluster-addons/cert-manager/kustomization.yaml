@@ -15,8 +15,6 @@ helmCharts:
 resources:
   - private-issuer.yaml
 
-
-
 patches: 
  - path: gcp-sa-patches.yaml
 
