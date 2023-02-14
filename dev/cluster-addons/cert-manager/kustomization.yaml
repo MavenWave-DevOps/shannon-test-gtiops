@@ -12,11 +12,11 @@ helmCharts:
   valuesFile: values.yaml
   version: 1.10.1
 
-patches:
-- patch: "- op: add\n  path: /webhooks/0/namespaceSelector/matchExpressions/-\n  value:\n
-    \   key: control-plane\n    operator: DoesNotExist  "
-  target:
-    group: admissionregistration.k8s.io
-    kind: ValidatingWebhookConfiguration
-    name: cert-manager-webhook
-    version: v1
+resources:
+  - private-issuer.yaml
+  - https://github.com/jetstack/google-cas-issuer/releases/download/v0.6.1/google-cas-issuer-v0.6.1.yaml
+
+
+patches: 
+ - path: gcp-sa-patches.yaml
+

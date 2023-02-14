@@ -1,0 +1,13 @@
+# googlecasissuer-sample.yaml
+apiVersion: cas-issuer.jetstack.io/v1beta1
+kind: GoogleCASIssuer
+metadata:
+  name: googlecasissuer-sample
+spec:
+  project: sr-cas-gke-test
+  location: us-central1
+  caPoolId: cas-sr-test
+  # credentials are optional if workload identity is enabled
+  # credentials:
+  #   name: "googlesa"
+  #   key: "$PROJECT_ID-key.json"
