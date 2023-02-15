@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: jenkins-sa
+  name: jenkins
   namespace: jenkins
   annotations:
-    iam.gke.io/gcp-service-account: external-secrets@sr-cas-gke-test.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: jenkins@sr-cas-gke-test.iam.gserviceaccount.com
