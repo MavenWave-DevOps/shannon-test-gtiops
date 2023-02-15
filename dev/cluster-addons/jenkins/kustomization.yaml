@@ -18,4 +18,4 @@ helmCharts:
   valuesFile: values.yaml
 
 patches:
-- path: sa-patches.yaml
+- path: gcp-sa-patches.yaml
