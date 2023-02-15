@@ -18,7 +18,7 @@ resources:
 
 patches:
 - path: gcp-sa-patches.yaml
+
 images:
-- name: cert-manager-google-cas-issuer
-  newName: quay.io/jetstack/cert-manager-google-cas-issuer
+- name: quay.io/jetstack/cert-manager-google-cas-issuer
   newTag: 0.6.2
