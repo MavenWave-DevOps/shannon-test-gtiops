@@ -1,0 +1,5 @@
+controller:
+  admin:
+    existingSecret: jenkins-admin-user
+    userKey: username
+    passwordKey: password
