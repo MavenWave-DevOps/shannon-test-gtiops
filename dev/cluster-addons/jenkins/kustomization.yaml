@@ -6,7 +6,6 @@ namespace: jenkins
 resources:
   - secret-store.yaml
   - secret.yaml
-  - sa.yaml
   # - ingress.yaml
   
 helmCharts:
@@ -17,3 +16,6 @@ helmCharts:
   namespace: jenkins
   repo:  https://charts.jenkins.io
   valuesFile: values.yaml
+
+patches:
+- path: sa-patches.yaml

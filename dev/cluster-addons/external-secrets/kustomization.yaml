@@ -11,5 +11,5 @@ helmCharts:
   repo:  https://charts.external-secrets.io
   valuesFile: values.yaml
 
-  patches:
-- path: sa-patches.yaml
+patches:
+- path: gcp-sa-patches.yaml
