@@ -1,0 +1,4 @@
+app: 
+  syncwave: -50
+  namespace: external-secrets
+    
