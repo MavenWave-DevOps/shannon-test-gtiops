@@ -1,0 +1,5 @@
+configMapGenerator:
+- name: nginx-cm
+  namespace: ngnix
+  files:
+  - cm-index.html

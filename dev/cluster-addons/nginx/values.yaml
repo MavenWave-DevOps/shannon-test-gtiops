@@ -1,0 +1,32 @@
+replicaCount: 1
+
+resources:
+  limits:
+    cpu: 300m
+
+# mount our own custom index.html from configmap
+extraVolumes:
+  - name: nginx-homedir
+    configMap:
+      name: nginx-cm
+      items:
+        - key: cm-index.html
+          path: index.html
+extraVolumeMounts:
+  - name: nginx-homedir
+    mountPath: "/usr/share/nginx/html" # /app by default
+    readOnly: true
+
+# insert custom NGINX configuration for healthcheck
+serverBlock: |-
+  server {
+      listen       8080;
+      server_name  _;
+      root         /usr/share/nginx/html;
+
+      # for kubernetes health check
+      location = /healthz {
+       add_header Content-Type text/plain;
+       return 200 'OK';
+      }
+  }
