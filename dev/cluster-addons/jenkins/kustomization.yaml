@@ -6,7 +6,7 @@ namespace: jenkins
 resources:
   - secret-store.yaml
   - secret.yaml
-  - certificate.yaml
+  # - certificate.yaml
   - ingress.yaml
   
 helmCharts:
