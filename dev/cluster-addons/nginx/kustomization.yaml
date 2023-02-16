@@ -4,8 +4,6 @@ kind: Kustomization
 namespace: nginx
 
 resources:
-- ns.yaml
-
 
 helmChartInflationGenerator:
 - chartName: nginx
@@ -17,7 +15,7 @@ helmChartInflationGenerator:
   values: values.yaml
 
 patches:
-# - path: gcp-sa-patches.yaml
+- path: gcp-sa-patches.yaml
 
 
 
