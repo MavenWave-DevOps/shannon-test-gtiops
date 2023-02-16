@@ -7,7 +7,7 @@ helmCharts:
 - name: nginx
   releaseName: nginx
   includeCRDs: true
-  version: 0.7.1
+  # version: 
   namespace: nginx
   repo:  https://helm.nginx.com/stable
   valuesFile: values.yaml
