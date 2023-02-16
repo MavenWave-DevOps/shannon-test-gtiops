@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: nginx
 
 resources:
+- ingress.yaml
 
 helmChartInflationGenerator:
 - chartName: nginx
