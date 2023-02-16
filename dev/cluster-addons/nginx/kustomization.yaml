@@ -18,6 +18,6 @@ helmChartInflationGenerator:
 
 patches:
 - path: gcp-sa-patches.yaml
-- path: configmap_patches.yaml
+
 
 
