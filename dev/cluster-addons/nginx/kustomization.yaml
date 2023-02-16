@@ -14,8 +14,8 @@ helmChartInflationGenerator:
   # override with these custom values
   values: values.yaml
 
-patches:
-- path: gcp-sa-patches.yaml
+# patches:
+# - path: gcp-sa-patches.yaml
 
 
 
