@@ -1,19 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: nginx
+namespace: ingress-nginx
 
 resources:
 - ingress.yaml
 
-helmChartInflationGenerator:
-- chartName: nginx
-  chartRepoUrl: https://charts.bitnami.com/bitnami
-  chartVersion: 13.2.24
-  releaseName: my-nginx-release
-  releaseNamespace: nginx-chart
-  # override with these custom values
-  values: values.yaml
+helmCharts:
+- name: ingress-nginx
+  releaseName: ingress-nginx
+  includeCRDs: true
+  version: 4.4.2
+  namespace: ingress-nginx
+  repo:  https://kubernetes.github.io/ingress-nginx
+  valuesFile: values.yaml
 
 # patches:
 # - path: gcp-sa-patches.yaml
