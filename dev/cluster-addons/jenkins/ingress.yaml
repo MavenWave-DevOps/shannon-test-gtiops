@@ -16,8 +16,8 @@ spec:
             name: jenkins
             port: 
               number: 8080
-    host: jenkins.dev.pz.igmapps.ca
+    host: jenkins.srush.test
   tls:
     - hosts:
-      - jenkins.dev.pz.igmapps.ca
+      - jenkins.srush.test
       secretName: jenkins-tls
