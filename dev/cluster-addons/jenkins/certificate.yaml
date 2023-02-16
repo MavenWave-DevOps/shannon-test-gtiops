@@ -12,9 +12,9 @@ spec:
   dnsNames:
     - cert-manager.srush.test
 # Duration of the certificate
-  duration: 24h
+  duration: 24h0m0s
 # Renew 8 hours before the certificate expiration
-  renewBefore: 8h
+  renewBefore: 8h0m0s
 # Important: Ensure the issuerRef is set to the issuer or cluster issuer configured earlier
   issuerRef:
     group: cas-issuer.jetstack.io
