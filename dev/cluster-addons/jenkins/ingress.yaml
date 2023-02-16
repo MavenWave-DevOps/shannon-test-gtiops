@@ -4,9 +4,9 @@ metadata:
   name: jenkins
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: googlecasclusterissuer-sample # issuer name 
+    # cert-manager.io/cluster-issuer: googlecasclusterissuer-sample # issuer name 
     cert-manager.io/issuer-kind: GoogleCASClusterIssuer # reference to the issuer we deployed in the cluster
-    cert-manager.io/issuer-group: cas-issuer.jetstack.io
+    # cert-manager.io/issuer-group: cas-issuer.jetstack.io
 
 spec:
   rules:
