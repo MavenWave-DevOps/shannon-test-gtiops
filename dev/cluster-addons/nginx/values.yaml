@@ -2,3 +2,5 @@ controller:
   admissionWebhooks:
     enabled: false
 
+annotations:
+  cloud.google.com/load-balancer-type: "Internal"
