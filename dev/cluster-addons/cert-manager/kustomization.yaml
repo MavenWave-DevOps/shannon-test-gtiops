@@ -21,4 +21,4 @@ patches:
 
 images:
 - name: quay.io/jetstack/cert-manager-google-cas-issuer
-  newTag: 0.6.1
+  newTag: 0.6.2
