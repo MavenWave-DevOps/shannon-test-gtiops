@@ -15,8 +15,8 @@ helmCharts:
   repo:  https://kubernetes.github.io/ingress-nginx
   valuesFile: values.yaml
 
-patches:
-- path: service.yaml
+# patches:
+# - path: service.yaml
 
 
 
