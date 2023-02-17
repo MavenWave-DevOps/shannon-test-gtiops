@@ -15,7 +15,7 @@ helmCharts:
   valuesFile: values.yaml
 
 patches:
-# - path: service_patches.yaml
+- path: service-patches.yaml
 
 
 
