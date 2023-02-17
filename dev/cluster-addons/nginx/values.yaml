@@ -2,6 +2,11 @@ controller:
   admissionWebhooks:
     enabled: false
 
-reportNodeInternalIp: true
-
 ingressClass: nginx
+
+annotations:
+    cloud.google.com/load-balancer-type: "Internal"
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/component: controller
