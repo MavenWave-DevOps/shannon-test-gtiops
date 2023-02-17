@@ -1,8 +1,8 @@
 # googlecasissuer-sample.yaml
 apiVersion: cas-issuer.jetstack.io/v1beta1
-kind: GoogleCASClusterIssuer
+kind: GoogleCASIssuer
 metadata:
-  name: googlecasclusterissuer-sample
+  name: googlecasissuer-sample
 spec:
   project: sr-cas-gke-test
   location: us-central1

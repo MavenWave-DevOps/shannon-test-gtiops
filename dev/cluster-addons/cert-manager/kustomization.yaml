@@ -13,7 +13,6 @@ helmCharts:
   version: 1.10.1
 
 resources:
-- private-issuer.yaml
 - https://github.com/jetstack/google-cas-issuer/releases/download/v0.6.2/google-cas-issuer-v0.6.2.yaml
 
 patches:
