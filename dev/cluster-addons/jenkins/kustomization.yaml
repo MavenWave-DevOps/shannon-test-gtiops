@@ -8,7 +8,7 @@ resources:
   - secret.yaml
   # - certificate.yaml
   - google-cas-issuer.yaml
-  - ingress.yaml
+  # - ingress.yaml
   
 helmCharts:
 - name: jenkins
@@ -20,5 +20,4 @@ helmCharts:
   valuesFile: values.yaml
 
 patches:
-- path: gcp-sa-patches.yaml
 - path: gcp-cas-sa-patches.yaml
