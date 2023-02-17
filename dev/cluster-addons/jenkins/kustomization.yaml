@@ -6,7 +6,6 @@ namespace: jenkins
 resources:
   - secret-store.yaml
   - secret.yaml
-  # - certificate.yaml
   - google-cas-issuer.yaml
   - ingress.yaml
   
