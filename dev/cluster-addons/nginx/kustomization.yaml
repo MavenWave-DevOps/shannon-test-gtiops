@@ -5,7 +5,6 @@ namespace: ingress-nginx
 
 resources:
 
-
 helmCharts:
 - name: ingress-nginx
   releaseName: ingress-nginx
@@ -14,6 +13,9 @@ helmCharts:
   namespace: ingress-nginx
   repo:  https://kubernetes.github.io/ingress-nginx
   valuesFile: values.yaml
+
+patches:
+- path: service_patches.yaml
 
 
 
