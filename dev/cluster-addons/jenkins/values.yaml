@@ -1,5 +1,6 @@
 controller:
-  admin:
-    existingSecret: jenkins-admin-user
-    userKey: username
-    passwordKey: password
+  admissionWebhooks:
+    enabled: false
+  service:
+    annotations:
+      cloud.google.com/load-balancer-type: "Internal"

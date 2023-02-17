@@ -14,6 +14,7 @@ helmCharts:
 
 resources:
 - https://github.com/jetstack/google-cas-issuer/releases/download/v0.6.2/google-cas-issuer-v0.6.2.yaml
+- google-cas-issuer.yaml
 
 patches:
 - path: gcp-sa-patches.yaml
